@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UltraPlay.ESports.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class FinalInitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,8 +15,7 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Participants",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -28,8 +27,7 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Sports",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -41,9 +39,10 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Events",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsLive = table.Column<bool>(type: "bit", nullable: false),
+                    CategoryId = table.Column<long>(type: "bigint", nullable: false),
                     SportId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -61,8 +60,7 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Matches",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     MatchType = table.Column<int>(type: "int", nullable: false),
@@ -83,8 +81,7 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Bets",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsLive = table.Column<bool>(type: "bit", nullable: false),
                     MatchId = table.Column<long>(type: "bigint", nullable: false)
@@ -128,8 +125,8 @@ namespace UltraPlay.ESports.Data.Migrations
                 name: "Odds",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Value = table.Column<double>(type: "float", nullable: false),
                     SpecialBetValue = table.Column<double>(type: "float", nullable: true),
                     BetId = table.Column<long>(type: "bigint", nullable: false)

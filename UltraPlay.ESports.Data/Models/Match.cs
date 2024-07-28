@@ -6,7 +6,7 @@
 
         public DateTime StartDate { get; set; }
 
-        public MatchType MatchType { get; set; }
+        public Enums.MatchType MatchType { get; set; }
 
         public long EventId { get; set; }
 

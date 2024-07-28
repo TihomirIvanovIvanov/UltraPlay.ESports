@@ -25,10 +25,7 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Bet", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<bool>("IsLive")
                         .HasColumnType("bit");
@@ -50,10 +47,13 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Event", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    b.Property<long>("CategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsLive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -72,10 +72,7 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Match", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<long>("EventId")
                         .HasColumnType("bigint");
@@ -115,13 +112,14 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Odd", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<long>("BetId")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double?>("SpecialBetValue")
                         .HasColumnType("float");
@@ -139,10 +137,7 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Participant", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -156,10 +151,7 @@ namespace UltraPlay.ESports.Data.Migrations
             modelBuilder.Entity("UltraPlay.ESports.Data.Models.Sport", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()

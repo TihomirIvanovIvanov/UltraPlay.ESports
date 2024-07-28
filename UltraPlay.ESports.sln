@@ -3,16 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports", "UltraPlay.ESports\UltraPlay.ESports.csproj", "{E5175BC7-41E0-4122-836C-3C7E9B12DE63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraPlay.ESports", "UltraPlay.ESports\UltraPlay.ESports.csproj", "{E5175BC7-41E0-4122-836C-3C7E9B12DE63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports.Data", "UltraPlay.ESports.Data\UltraPlay.ESports.Data.csproj", "{1750D62D-2DE7-4A9E-AFDA-36B3BD11C0D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraPlay.ESports.Data", "UltraPlay.ESports.Data\UltraPlay.ESports.Data.csproj", "{1750D62D-2DE7-4A9E-AFDA-36B3BD11C0D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports.Services", "UltraPlay.ESports.Services\UltraPlay.ESports.Services.csproj", "{131F98FB-6C73-45F1-BB09-EA570F63A3DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraPlay.ESports.Services", "UltraPlay.ESports.Services\UltraPlay.ESports.Services.csproj", "{131F98FB-6C73-45F1-BB09-EA570F63A3DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C46D617-BD3C-408A-A2A0-060896B9387B}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports.DataProcessing", "UltraPlay.ESports.DataProcessing\UltraPlay.ESports.DataProcessing.csproj", "{188735CC-5519-464F-B8BE-A496656C8DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{131F98FB-6C73-45F1-BB09-EA570F63A3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{131F98FB-6C73-45F1-BB09-EA570F63A3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131F98FB-6C73-45F1-BB09-EA570F63A3DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188735CC-5519-464F-B8BE-A496656C8DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188735CC-5519-464F-B8BE-A496656C8DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188735CC-5519-464F-B8BE-A496656C8DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188735CC-5519-464F-B8BE-A496656C8DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
