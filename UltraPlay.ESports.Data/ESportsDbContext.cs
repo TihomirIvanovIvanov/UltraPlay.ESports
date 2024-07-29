@@ -15,10 +15,6 @@ namespace UltraPlay.ESports.Data
 
         public DbSet<Odd> Odds { get; set; }
 
-        public DbSet<Participant> Participants { get; set; }
-
-        public DbSet<MatchParticipant> MatchParticipants { get; set; }
-
         public ESportsDbContext(DbContextOptions<ESportsDbContext> options) 
             : base(options)
         {
@@ -47,19 +43,6 @@ namespace UltraPlay.ESports.Data
                 .HasMany(b => b.Odds)
                 .WithOne(o => o.Bet)
                 .HasForeignKey(o => o.BetId);
-
-            builder.Entity<MatchParticipant>()
-                .HasKey(mp => new { mp.MatchId, mp.ParticipantId });
-
-            builder.Entity<MatchParticipant>()
-                .HasOne(mp => mp.Match)
-                .WithMany(m => m.MatchParticipants)
-                .HasForeignKey(mp => mp.MatchId);
-
-            builder.Entity<MatchParticipant>()
-                .HasOne(mp => mp.Participant)
-                .WithMany(p => p.MatchParticipants)
-                .HasForeignKey(mp => mp.ParticipantId);
 
             // Disable cascade delete
             var entityTypes = builder.Model.GetEntityTypes().ToList();

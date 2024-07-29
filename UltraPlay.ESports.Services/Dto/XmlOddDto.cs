@@ -14,7 +14,7 @@ namespace UltraPlay.ESports.Services.Dto
         [XmlAttribute("Value")]
         public double Value { get; set; }
 
-        [XmlElement("SpecialBetValue")]
-        public double? SpecialBetValue { get; set; }
+        [XmlAttribute("SpecialBetValue")]
+        public double SpecialBetValue { get; set; }
     }
 }

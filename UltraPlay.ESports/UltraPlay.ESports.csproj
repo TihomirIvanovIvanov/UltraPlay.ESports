@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UltraPlay.ESports.DataProcessing\UltraPlay.ESports.DataProcessing.csproj" />
     <ProjectReference Include="..\UltraPlay.ESports.Data\UltraPlay.ESports.Data.csproj" />
+    <ProjectReference Include="..\UltraPlay.ESports.Events\UltraPlay.ESports.Events.csproj" />
     <ProjectReference Include="..\UltraPlay.ESports.Services\UltraPlay.ESports.Services.csproj" />
   </ItemGroup>
 

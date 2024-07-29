@@ -26,7 +26,7 @@ namespace UltraPlay.ESports.Services
                     Name = xmlOdd.Name,
                     Value = xmlOdd.Value,
                     BetId = betId,
-                    SpecialBetValue = xmlOdd.SpecialBetValue.HasValue ? xmlOdd.SpecialBetValue.Value : null,
+                    SpecialBetValue = xmlOdd.SpecialBetValue,
                 };
 
                 await this.dbContext.Odds.AddAsync(newOdd);

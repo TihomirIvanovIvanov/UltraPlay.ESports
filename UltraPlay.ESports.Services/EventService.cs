@@ -1,20 +1,24 @@
-﻿using UltraPlay.ESports.Data;
+﻿using Microsoft.Extensions.Logging;
+using UltraPlay.ESports.Data;
 using UltraPlay.ESports.Data.Models;
 using UltraPlay.ESports.Services.Contracts;
 using UltraPlay.ESports.Services.Dto;
 
 namespace UltraPlay.ESports.Services
 {
-    public class EvenService : IEventService
+    public class EventService : IEventService
     {
         private readonly ESportsDbContext dbContext;
 
         private readonly IMatchService matchService;
 
-        public EvenService(ESportsDbContext dbContext, IMatchService matchService)
+        private readonly ILogger<EventService> logger;
+
+        public EventService(ESportsDbContext dbContext, IMatchService matchService, ILogger<EventService> logger)
         {
             this.dbContext = dbContext;
             this.matchService = matchService;
+            this.logger = logger;
         }
 
         public async Task AddOrUpdateEventAsync(XmlEventDto xmlEvent, long sportId)

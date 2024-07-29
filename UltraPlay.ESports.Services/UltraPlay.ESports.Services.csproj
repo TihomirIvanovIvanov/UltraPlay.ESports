@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UltraPlay.ESports.Data\UltraPlay.ESports.Data.csproj" />
+    <ProjectReference Include="..\UltraPlay.ESports.Events\UltraPlay.ESports.Events.csproj" />
   </ItemGroup>
 
 </Project>

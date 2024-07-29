@@ -13,7 +13,5 @@
         public Event Event { get; set; }
 
         public ICollection<Bet> Bets { get; set; } = new List<Bet>();
-
-        public ICollection<MatchParticipant> MatchParticipants { get; set; } = new List<MatchParticipant>();
     }
 }

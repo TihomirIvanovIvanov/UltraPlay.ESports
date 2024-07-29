@@ -9,9 +9,12 @@ namespace UltraPlay.ESports.Controllers
     {
         private readonly IDataPollingService pollingService;
 
-        public DataController(IDataPollingService pollingService)
+        private readonly ILogger<DataController> logger;
+
+        public DataController(IDataPollingService pollingService, ILogger<DataController> logger)
         {
             this.pollingService = pollingService;
+            this.logger = logger;
         }
 
         [HttpPost("FetchAndSave")]
@@ -24,6 +27,7 @@ namespace UltraPlay.ESports.Controllers
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, $"Error occur in DataController: {ex.Message}.");
                 return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }
