@@ -6,13 +6,13 @@ namespace UltraPlay.ESports.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BetController : ControllerBase
+    public class BetsController : ControllerBase
     {
         private readonly IBetEventService eventService;
 
-        private readonly ILogger<BetController> logger;
+        private readonly ILogger<BetsController> logger;
 
-        public BetController(IBetEventService eventService, ILogger<BetController> logger)
+        public BetsController(IBetEventService eventService, ILogger<BetsController> logger)
         {
             this.eventService = eventService;
             this.logger = logger;

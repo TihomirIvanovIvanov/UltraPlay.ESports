@@ -12,13 +12,10 @@ namespace UltraPlay.ESports.Services
 
         private readonly IMatchService matchService;
 
-        private readonly ILogger<EventService> logger;
-
-        public EventService(ESportsDbContext dbContext, IMatchService matchService, ILogger<EventService> logger)
+        public EventService(ESportsDbContext dbContext, IMatchService matchService)
         {
             this.dbContext = dbContext;
             this.matchService = matchService;
-            this.logger = logger;
         }
 
         public async Task AddOrUpdateEventAsync(XmlEventDto xmlEvent, long sportId)

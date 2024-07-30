@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraPlay.ESports.DataProcessing", "UltraPlay.ESports.DataProcessing\UltraPlay.ESports.DataProcessing.csproj", "{188735CC-5519-464F-B8BE-A496656C8DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports.Events", "UltraPlay.ESports.Events\UltraPlay.ESports.Events.csproj", "{D1C6B078-6987-42F3-8B3D-ECFF0672C0FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraPlay.ESports.Events", "UltraPlay.ESports.Events\UltraPlay.ESports.Events.csproj", "{D1C6B078-6987-42F3-8B3D-ECFF0672C0FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraPlay.ESports.Tests", "UltraPlay.ESports.Tests\UltraPlay.ESports.Tests.csproj", "{7166D262-E380-45F2-B068-FB54729583DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{D1C6B078-6987-42F3-8B3D-ECFF0672C0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1C6B078-6987-42F3-8B3D-ECFF0672C0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1C6B078-6987-42F3-8B3D-ECFF0672C0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7166D262-E380-45F2-B068-FB54729583DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7166D262-E380-45F2-B068-FB54729583DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7166D262-E380-45F2-B068-FB54729583DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7166D262-E380-45F2-B068-FB54729583DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

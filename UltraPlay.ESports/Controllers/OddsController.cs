@@ -6,20 +6,20 @@ namespace UltraPlay.ESports.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class OddController : ControllerBase
+    public class OddsController : ControllerBase
     {
         private readonly IOddEventService eventService;
 
-        private readonly ILogger<OddController> logger;
+        private readonly ILogger<OddsController> logger;
 
-        public OddController(IOddEventService eventService, ILogger<OddController> logger)
+        public OddsController(IOddEventService eventService, ILogger<OddsController> logger)
         {
             this.eventService = eventService;
             this.logger = logger;
         }
 
         [HttpPost("UpdateOdd")]
-        public async Task<IActionResult> UpdateBet([FromBody] OddServiceModel message)
+        public async Task<IActionResult> UpdateOdd([FromBody] OddServiceModel message)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace UltraPlay.ESports.Controllers
         }
 
         [HttpPost("DeleteOdd/{oddId}/{betId}")]
-        public async Task<IActionResult> DeleteBet(long oddId, long betId)
+        public async Task<IActionResult> DeleteOdd(long oddId, long betId)
         {
             try
             {
